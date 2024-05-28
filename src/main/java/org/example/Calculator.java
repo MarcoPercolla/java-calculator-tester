@@ -1,7 +1,7 @@
 package org.example;
 
 public interface Calculator {
-    
+
     static float add(float num1, float num2) {
         return num1 + num2;
     }
@@ -14,9 +14,9 @@ public interface Calculator {
         return num1 * num2;
     }
 
-    static float divide(float num1, float num2) throws ArithmeticException {
+    static float divide(float num1, float num2) throws IllegalArgumentException {
         if (num2 == 0) {
-            throw new ArithmeticException("Cannot divide by 0");
+            throw new IllegalArgumentException("Cannot divide by 0");
         }
         return num1 / num2;
     }
